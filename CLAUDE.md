@@ -8,7 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Create work: `bd create "Title" -p 1 --description "Context + acceptance criteria"`
 - Update status: `bd update <id> --status in_progress`
 - Finish: `bd close <id> --reason "Done"`
-- End of session: `bd sync` (flush/import/export + git sync)
+- End of session: `bd dolt push` when a Dolt remote is configured; source-code
+  synchronization remains a separate `git push`.
 - Manual testing safety:
   - Prefer `BEADS_DIR` to isolate a workspace if needed. (`BEADS_DB` exists but is deprecated.)
 - After upgrading `bd`, run: `bd info --whats-new`
