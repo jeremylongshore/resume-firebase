@@ -1,5 +1,24 @@
 # Operation Hired - Resume Generator
 
+## Bundled public skill
+
+This public repository includes the current `beads-expert` Agent Skill for
+Dolt-backed project tracking:
+
+```bash
+npx skills add jeremylongshore/resume-firebase --skill beads-expert
+```
+
+The skill is independent of the resume application runtime. Review it before
+installation; it can create and update issues through the local `bd` CLI.
+
+## Credential policy
+
+Do not commit service-account JSON keys. GitHub Actions authenticates with
+Workload Identity Federation, and local development should use Application
+Default Credentials or another operator-managed credential source. The tracked
+worker key placeholder was intentionally removed.
+
 AI-powered military-to-civilian resume generator.
 
 ---
